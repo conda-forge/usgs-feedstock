@@ -14,9 +14,8 @@ Summary: Access the USGS inventory service
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/usgs-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/usgs-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/usgs-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/usgs-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/usgs-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/usgs-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/usgs-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/usgs-feedstock)
 
 Current release info
 ====================
