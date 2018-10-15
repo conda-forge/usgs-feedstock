@@ -1,4 +1,4 @@
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: usgs
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/u/usgs/usgs-{{ version }}.tar.gz
-  sha256: 1a09dd2d5b65ac83ba81f6f7db3054435b5e92c46f80dd040c363fc238f8b5a1
+  sha256: df09f07fa7f4345d3a36643c72428ee8351210c56f82b822a11f5be907bc1522
 
 build:
   number: 0
