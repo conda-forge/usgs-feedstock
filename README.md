@@ -3,7 +3,7 @@ About usgs
 
 Home: https://github.com/mapbox/usgs
 
-Package license: MIT
+Package license: ISC
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/usgs-feedstock/blob/master/LICENSE.txt)
 
