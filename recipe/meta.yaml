@@ -1,4 +1,4 @@
-{% set version = "0.2.7" %}
+{% set version = "0.2.8" %}
 
 package:
   name: usgs
@@ -6,18 +6,18 @@ package:
 
 source:
   url: https://pypi.io/packages/source/u/usgs/usgs-{{ version }}.tar.gz
-  sha256: 484e569ea1baf9574e11ccf15219957364690dcf06ee3d09afef030df944e79b
+  sha256: 69c837666b9403cf482a657849263a9104a93e0750ac7318163670ce39db4044
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
-  preserve_egg_dir: True
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
+  preserve_egg_dir: true
   entry_points:
     - usgs = usgs.scripts.cli:usgs
 
 requirements:
-  build:
+  host:
     - python >=3
     - pip
   run:
@@ -37,7 +37,7 @@ test:
 about:
   home: https://github.com/mapbox/usgs
   license: MIT
-  summary: 'Access the USGS inventory service'
+  summary: Access the USGS inventory service
 
 extra:
   recipe-maintainers:
