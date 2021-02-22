@@ -11,8 +11,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
-  preserve_egg_dir: True
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - usgs = usgs.scripts.cli:usgs
 
@@ -36,7 +35,8 @@ test:
 
 about:
   home: https://github.com/mapbox/usgs
-  license: MIT
+  license: ISC
+  license_file: LICENSE
   summary: 'Access the USGS inventory service'
 
 extra:
