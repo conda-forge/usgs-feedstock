@@ -1,4 +1,4 @@
-{% set version = "0.2.7" %}
+{% set version = "0.3.0" %}
 
 package:
   name: usgs
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/u/usgs/usgs-{{ version }}.tar.gz
-  sha256: 484e569ea1baf9574e11ccf15219957364690dcf06ee3d09afef030df944e79b
+  sha256: df79d831f20da80aa90c484665571f5a726fa4a406c2bea16c91707ec6ca975f
 
 build:
   number: 0
@@ -16,7 +16,7 @@ build:
     - usgs = usgs.scripts.cli:usgs
 
 requirements:
-  build:
+  host:
     - python >=3
     - pip
   run:
@@ -37,7 +37,7 @@ about:
   home: https://github.com/mapbox/usgs
   license: ISC
   license_file: LICENSE
-  summary: 'Access the USGS inventory service'
+  summary: Access the USGS inventory service
 
 extra:
   recipe-maintainers:
