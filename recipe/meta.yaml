@@ -9,7 +9,7 @@ source:
   sha256: 3f5c4b7e94f12205b9873b618fb343821130da84e68a8533923a98732c49bb41
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -17,10 +17,10 @@ build:
 
 requirements:
   host:
-    - python >=3
+    - python >=3.6
     - pip
   run:
-    - python >=3
+    - python >=3.6
     - setuptools
     - click >=4.0
     - requests >=2.7.0
@@ -31,10 +31,13 @@ test:
     - usgs
     - usgs.scripts
   commands:
+    - pip check
     - usgs --help
+  requires:
+    - pip
 
 about:
-  home: https://github.com/mapbox/usgs
+  home: https://github.com/kapadia/usgs
   license: ISC
   license_file: LICENSE
   summary: Access the USGS inventory service
