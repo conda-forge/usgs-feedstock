@@ -1,11 +1,11 @@
-About usgs
-==========
-
-Home: https://github.com/mapbox/usgs
-
-Package license: ISC
+About usgs-feedstock
+====================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/usgs-feedstock/blob/main/LICENSE.txt)
+
+Home: https://github.com/kapadia/usgs
+
+Package license: ISC
 
 Summary: Access the USGS inventory service
 
