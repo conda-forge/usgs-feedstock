@@ -5,22 +5,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/u/usgs/usgs-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/u/usgs/usgs-{{ version }}.tar.gz
   sha256: 62734bfd23829e8b90701c49cb2f868d3bf4c706ea6b53939711186cf6df0807
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - usgs = usgs.scripts.cli:usgs
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - setuptools
     - click >=4.0
     - requests >=2.7.0
@@ -35,6 +36,7 @@ test:
     - usgs --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/kapadia/usgs
